@@ -1,0 +1,480 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --primary: #2c3e50;
+  --secondary: #e74c3c;
+  --accent: #3498db;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
+  --text: #333;
+  --text-light: #7f8c8d;
+  --white: #fff;
+  --gray: #f7f7f7;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: var(--light);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: var(--dark);
+  font-weight: 500;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(44, 62, 80, 0.9) 0%, rgba(52, 152, 219, 0.8) 100%);
+  color: var(--white);
+}
+
+.hero-text {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.hero-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.hero-image img {
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 2px solid var(--secondary);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+/* Biography Section */
+.biography {
+  padding: 4rem 2rem;
+  background-color: var(--dark);
+}
+
+.biography h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: var(--white);
+  position: relative;
+}
+
+.biography h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary);
+  margin: 0.5rem auto;
+}
+
+.scroll-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: var(--gray);
+}
+
+.scroll-box p {
+  margin-bottom: 1rem;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 20px;
+}
+
+.split-image {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.split-image img {
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Hobbies Section */
+.hobbies {
+  padding: 4rem 2rem;
+  background-color: var(--dark);
+}
+
+.hobbies h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: var(--white);
+}
+
+.hobby-scroll {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: var(--gray);
+}
+
+/* Updated Image Container Styles */
+.image-container {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-height: 400px; /* Limit vertical size */
+  overflow: hidden;  /* Prevent overflow */
+}
+
+.image-container img {
+  width: 100%;
+  height: 800px;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+  
+  /* Adjusted Layout Proportions */
+  .biography .content,
+  .hobbies .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .biography .content,
+    .hobbies .content {
+      flex-direction: row;
+    }
+    
+    .bio-text,
+    .hobby-text {
+      flex: 3; /* Gives more space to text */
+    }
+    
+    .image-container {
+      flex: 1; /* Smaller proportional space for image */
+      align-self: flex-start; /* Aligns to top */
+      position: sticky;
+      top: 20px; /* Sticks while scrolling */
+    }
+  }
+  
+  /* Scrollable Content Adjustments */
+  .scroll-box,
+  .hobby-scroll {
+    height: 400px; /* Fixed height */
+    padding: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  /* Better Text Formatting */
+  .scroll-box p,
+  .hobby-scroll p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+  }
+  
+  .scroll-box p:first-child,
+  .hobby-scroll p:first-child {
+    margin-top: 0;
+  }
+
+/* Socials Section */
+.socials {
+  padding: 4rem 2rem;
+  background-color: var(--dark);
+  text-align: center;
+}
+
+.socials h2 {
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: var(--white);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
+
+.insta {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+
+.youtube-embed {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.youtube-embed iframe {
+  border: none;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    min-height: 80vh;
+    align-items: center;
+  }
+
+  .hero-text {
+    padding-right: 2rem;
+  }
+
+  .hero-image {
+    margin-bottom: 0;
+  }
+
+  .biography .split-text,
+  .hobbies .hobby-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .split-image img,
+  .image-container img {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+  }
+
+  header h1 {
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .hero-text,
+  .hero-image {
+    padding: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .biography,
+  .hobbies,
+  .socials {
+    padding: 5rem;
+  }
+
+  .biography .content,
+  .hobbies .content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .biography .split-text,
+  .hobbies .hobby-text {
+    flex: 2;
+  }
+
+  .split-image,
+  .image-container {
+    flex: 1;
+    margin-top: 0;
+  }
+}
+

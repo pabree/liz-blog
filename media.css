@@ -1,0 +1,167 @@
+/* design.css */
+
+/* === 1) Import Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* === 2) CSS Variables === */
+:root {
+  --primary: #2c3e50;        /* deep blue */
+  --accent: #ff6f61;         /* coral accent */
+  --light-bg: #f5f7fa;       /* pale page background */
+  --text-dark: #2c3e50;      /* main text */
+  --text-light: #555555;     /* secondary text */
+  --white: white;
+  --radius-circle: 50%;      /* perfect circle */
+  --max-width: 900px;        /* center container */
+  --gap: 2rem;               /* default gap */
+  --social-size: 2.5rem;     /* social icon size */
+}
+
+/* === 3) Global Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--primary);
+  color: var(--white);
+  line-height: 1.6;
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent);
+}
+
+/* === 4) Header & Navbar === */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+header nav a {
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: color 0.2s;
+}
+header nav a:hover {
+  color: var(--accent);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 2rem;
+    color: #222;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  .section-title {
+    margin: 2rem 0 1rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #007bff;
+    display: inline-block;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(320px,1fr));
+    gap: 1.5rem;
+  }
+  .media-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease;
+  }
+  .media-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 0.15);
+  }
+  .position-relative {
+    position: relative;
+  }
+  .tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #007bff;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    font-weight: 600;
+    z-index: 10;
+  }
+  .article-preview img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  .article-preview .text {
+    padding: 1rem 1.2rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .article-preview h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  .article-preview p {
+    flex-grow: 1;
+    margin: 0 0 1rem;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .article-preview a {
+    align-self: flex-start;
+    color: #007bff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  .article-preview a:hover {
+    color: #0056b3;
+  }
+  .image-card .image-placeholder {
+    background: #ccc;
+    color: #444;
+    font-weight: 700;
+    font-size: 1.2rem;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  }
+  

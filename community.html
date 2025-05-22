@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Social Work | Liz Jumah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #3E8EDE; /* Tufts Blue */
+      --secondary: #FFD700; /* Dark Yellow */
+      --dark: #2C3E50;
+      --red: red;
+      --light: #F8F9FA;
+      --gray: #6C757D;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #2C3E50;
+      color: #333;
+      line-height: 1.6;
+    }
+    
+    /* Updated Header/Nav Styles */
+/* ─── Streamlined Navbar ─── */
+header {
+  position: sticky;
+  top: 0;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;          /* less vertical padding */
+  background: #ffffff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;             /* slightly smaller title */
+  color: var(--dark);
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end; /* Changed from center */
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+/* Remove text-align:center from original h1 style */
+nav a {
+  color: var(--dark);
+  font-weight: 500;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  transition: var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+/* Remove existing nav styles and replace with these */
+    
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .social-intro {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background-color: --dark;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .social-intro h2 {
+      color: var(--light);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .social-intro p {
+      font-size: 1.1rem;
+      color: var(--light);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .program-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .program-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .program-image {
+      height: 200px;
+      background-color: var(--light);
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+    .program-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(62, 142, 222, 0.3), rgba(62, 142, 222, 0.7));
+    }
+    
+    .program-content {
+      padding: 1.5rem;
+    }
+    
+    .program-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    .program-card h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+    
+    .program-card p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+    }
+    
+    .program-card strong {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: #007BFF; /* Feel free to change */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+    
+    footer {
+      background-color: var(--light);
+      color: --dark;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      nav {
+        gap: 0.8rem;
+      }
+      
+      .social-intro {
+        padding: 1.5rem;
+      }
+      
+      .social-intro h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Social Work</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="media.html">Speaking</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="social-intro">
+      <h2>Empowering Communities, One Step at a Time</h2>
+      <p>Every project is a promise — to uplift, educate, and empower. Here's how Liz is making waves in grassroots change.</p>
+    </section>
+
+    <section class="program-grid">
+      <div class="program-card">
+        <div class="program-image" style="background-image: url('');"></div>
+        <div class="program-content">
+          <h3>Wema Girls Cup</h3>
+          <p>Empowering over <strong> 600 girls</strong> across 16 villages through soccer, life skills, and mentorship — reducing early pregnancies, early marriages, childhood sex and school dropouts.</p>
+        </div>
+      </div>
+      <div class="program-card">
+        <div class="program-image" style="background-image: url('');"></div>
+        <div class="program-content">
+          <h3>Wema Technical Training Institute</h3>
+          <p>Training women and youth in skills like <strong>baking, ICT, tailoring, masonry, accounting</strong>, and entrepreneurship to unlock self-reliance and opportunity.</p>
+        </div>
+      </div>
+      <div class="program-card">
+        <div class="program-image" style="background-image: url('');"></div>
+        <div class="program-content">
+          <h3>Wema Water Project</h3>
+          <p>Providing clean, accessible water to underserved communities, radically transforming health, sanitation, and dignity.</p>
+        </div>
+      </div>
+      <div class="program-card">
+        <div class="program-image" style="background-image: url('');"></div>
+        <div class="program-content">
+          <h3>Wema BDO</h3>
+          <p>Driving holistic community transformation through inclusive programs in <strong>education, health, empowerment,</strong> and sustainability.</p>
+          <a href="https://wemabdo.org/l" class="read-more-btn">Read More</a>
+        </div>
+      </div>
+      
+      <div class="program-card">
+        <div class="program-image" style="background-image: url('');"></div>
+        <div class="program-content">
+          <h3>Unilever Global Ambassador (2014)</h3>
+          <p>Represented the <strong>Unilever Foundation</strong> globally, impacting over <strong>2.5 million farmers</strong> and championing social innovation worldwide.</p>
+          <a href="unilever-ambassador.html" class="read-more-btn">Read More</a>
+        </div>
+      </div>      
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Liz Jumah — All Rights Reserved</p>
+  </footer>
+</body>
+</html>
